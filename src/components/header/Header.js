@@ -5,8 +5,8 @@ import LoginButton from "../../pages/login/LoginButton";
 
 import Logo from "../../images/nftHouse-brand.png";
 
-import { AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { CgProfile } from "react-icons/cg";
+import { AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
+import { CgProfile, CgClose } from "react-icons/cg";
 
 const style = {
   navWrapper:
@@ -51,7 +51,7 @@ function Header() {
       </Link>
 
       <div onClick={() => setOpen(!open)} className={style.menuBtn}>
-        {!open ? <AiOutlineMenu /> : <AiOutlineClose />}
+        {!open ? <AiOutlineMenu /> : <CgClose />}
       </div>
 
       <div
@@ -93,8 +93,8 @@ function Header() {
               </div>
             </NavLink>
 
-            <NavLink to="/login">
-              <LoginButton />
+            <NavLink to="/login">            
+                <LoginButton />                         
             </NavLink>
           </div>
         </div>

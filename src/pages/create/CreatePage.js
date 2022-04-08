@@ -1,7 +1,8 @@
 import Header from "../../components/header/Header";
 
-import { IoMdWallet } from "react-icons/io";
-import { IoMdImage } from "react-icons/io";
+import { IoMdWallet, IoMdImage, IoMdClose } from "react-icons/io";
+
+//import { useRef, useState, useEffect } from "react";
 
 const style = {
   createWrapper: "block w-full h-full",
@@ -19,7 +20,8 @@ const style = {
   imageText: "flex font-medium text-[13px] text-[#8A939B]",
   imageInputContainer:
     "relative p-[4px] border-dashed border-[3px] rounded-[10px] justify-center items-center flex  h-[257px] w-[350px]",
-  imageInput: "relative m-0 opacity-0 z-20 appearance-none bg-inherit cursor-pointer items-baseline text-ellipsis text-left p-[4px] border-[3px] w-full h-full overflow-hidden",
+  imageInput:
+    "relative m-0 opacity-0 z-20 appearance-none bg-inherit cursor-pointer items-baseline text-ellipsis text-left p-[4px] border-[3px] w-full h-full overflow-hidden",
   imageIcon: "flex absolute text-[84px] items-center justify-center",
   detailsWrapper: "flex flex-col mb-[24px]",
   detailsContainer: "flex flex-col text-[20px]",
@@ -39,6 +41,22 @@ const style = {
 };
 
 const CreatePage = () => {
+  /* const [image, setImage] = useState();
+  const [preview, setPreview] = useState();
+  const fileInputRef = useRef();
+
+  useEffect(() => {
+    if (image) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setPreview(reader.result);
+      };
+      reader.readAsDataURL(image);
+    } else {
+      setPreview(null);
+    }
+  }, [image]); */
+
   return (
     <>
       <Header />
@@ -74,10 +92,21 @@ const CreatePage = () => {
                       autocomplete="off"
                       overflow="hidden"
                       required
-                    />
-                    <i className={style.imageIcon}>                  
-                      <IoMdImage />
-                    </i>
+                    />                  
+                    <div className="absolute z-71 right-[12px] top-[12px] block cursor-pointer text-[15px]">
+                      <button className="inline-flex items-center border-none p-0 m-0">
+                        <i className="text-[24px]"><IoMdClose /></i>
+                      </button>
+                    </div>
+                    {/* <div className="absolute ring-0 z-1 items-center justify-center flex flex-col opacity-0"> */}
+                    <div className="absolute ring-0 z-1 items-center justify-center flex flex-col">
+                      <i className={style.imageIcon}>
+                        <IoMdImage />
+                      </i>
+                    </div>
+                    <div className="w-full h-full items-center justify-center flex overflow-hidden absolute rounded-[10px] p-1">
+                      <img className="object-cover h-full w-full" alt="" />
+                    </div>
                     <div className="block absolute m-0 ring-[4px] z-70 opacity-0 hover:opacity-10 rounded-[10px] bg-[#000000] w-full h-full"></div>
                   </div>
                 </div>
