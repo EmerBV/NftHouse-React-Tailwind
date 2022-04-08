@@ -18,9 +18,9 @@ const style = {
   imageTittle: "flex font-semibold text-[20px] mb-[4px]",
   imageText: "flex font-medium text-[13px] text-[#8A939B]",
   imageInputContainer:
-    "relative p-[4px] border-dashed border-[3px] rounded-[10px] justify-center items-center flex flex-col h-[257px] w-[350px] cursor-pointer",
-  imageInput: "hidden m-0 appearance-none cursor-default z-[-1]",
-  imageIcon: "text-[84px] cursor-pointer",
+    "relative p-[4px] border-dashed border-[3px] rounded-[10px] justify-center items-center flex  h-[257px] w-[350px]",
+  imageInput: "relative m-0 opacity-0 z-20 appearance-none bg-inherit cursor-pointer items-baseline text-ellipsis text-left p-[4px] border-[3px] w-full h-full overflow-hidden",
+  imageIcon: "flex absolute text-[84px] items-center justify-center",
   detailsWrapper: "flex flex-col mb-[24px]",
   detailsContainer: "flex flex-col text-[20px]",
   generalInfoContainer: "flex flex-col mb-[8px] text-[20px]",
@@ -66,7 +66,7 @@ const CreatePage = () => {
                       WAV, OGG, GLB, GLTF. Max size: 100 MB
                     </span>
                   </div>
-                  <div className={style.imageInputContainer}>
+                  <div className={style.imageInputContainer} role="button">
                     <input
                       className={style.imageInput}
                       accept="image/*, video/*, audio/*"
@@ -75,10 +75,10 @@ const CreatePage = () => {
                       overflow="hidden"
                       required
                     />
-                    <i className={style.imageIcon}>
+                    <i className={style.imageIcon}>                  
                       <IoMdImage />
                     </i>
-                    <div className="block absolute ring-[4px] z-[70] opacity-0 h-0 rounded-[10px]"></div>
+                    <div className="block absolute m-0 ring-[4px] z-70 opacity-0 hover:opacity-10 rounded-[10px] bg-[#000000] w-full h-full"></div>
                   </div>
                 </div>
 
