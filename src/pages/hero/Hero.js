@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import Header from "../header/Header";
-import Footer from "../footer/Footer";
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 import CardImg from "../../images/card_Img.jpg";
 
 import { AiOutlineInfoCircle } from "react-icons/ai";

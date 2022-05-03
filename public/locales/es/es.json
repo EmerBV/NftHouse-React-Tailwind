@@ -71,5 +71,8 @@
 
 	"Sign Up": "Registrarse",
 	"Username": "Nombre de usuario",
-	"CONFIRM": "CONFIRMAR"
+	"CONFIRM": "CONFIRMAR",
+
+	"Page Not Found": "Página no encontrada",
+	"Go to Home": "Ir a Inicio"
 }

@@ -52,7 +52,7 @@ const Footer = () => {
 
       <ul className={style.list}>
         <li>
-          <Link to="/" className={style.listItem}>
+          <Link to="/404" className={style.listItem}>
             {t("Privacy Policy")}
           </Link>
         </li>

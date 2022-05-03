@@ -1,13 +1,13 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import Hero from "./components/hero/Hero";
+import Hero from "./pages/hero/Hero";
 import ExplorePage from "./pages/explore/ExplorePage";
 import AccountPage from "./pages/account/AccountPage";
 import Nft from "./pages/nfts/[nftId]";
 import CreatePage from "./pages/create/CreatePage";
 import LoginPage from "./pages/login/LoginPage";
 import SignupPage from "./pages/signup/SignupPage";
-import NotFoundPage from "./components/error/NotFoundPage";
+import NotFoundPage from "./pages/error/NotFoundPage";
 
 import "./App.css";
 
