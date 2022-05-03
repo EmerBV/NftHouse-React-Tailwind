@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import Header from "../../components//header/Header";
 import NFTCard from "../../components/nft/NFTCard";
 import BannerImg from "../../images/banner.jpg";
@@ -45,6 +47,8 @@ const style = {
 };
 
 const AccountPage = () => {
+  const { t } = useTranslation(["es"]);
+
   return (
     <>
       <Header />
@@ -90,7 +94,7 @@ const AccountPage = () => {
 
         <div className={style.midRow}>
           <div className={style.createdBy}>
-            Created by
+            {t("Created by")}
             <span className={style.createdName}>emer88</span>
           </div>
         </div>
@@ -99,33 +103,34 @@ const AccountPage = () => {
           <div className={style.statsContainer}>
             <div className={style.collectionStat}>
               <div className={style.statValue}>20</div>
-              <div className={style.statName}>items</div>
+              <div className={style.statName}>{t("items")}</div>
             </div>
             <div className={style.collectionStat}>
               <div className={style.statValue}>1</div>
-              <div className={style.statName}>owners</div>
+              <div className={style.statName}>{t("owners")}</div>
             </div>
             <div className={style.collectionStat}>
               <div className={style.statValue}>
                 <img className={style.ethLogo} src={EthLogo} alt="" />
                 0.1
               </div>
-              <div className={style.statName}>floor price</div>
+              <div className={style.statName}>{t("floor price")}</div>
             </div>
             <div className={style.collectionStat}>
               <div className={style.statValue}>
                 <img className={style.ethLogo} src={EthLogo} alt="" />
                 .5K
               </div>
-              <div className={style.statName}>volume traded</div>
+              <div className={style.statName}>{t("volume traded")}</div>
             </div>
           </div>
         </div>
 
         <div className={style.midRow}>
           <div className={style.collectionHeader}>
-            A brand for the metaverse. Built by the community. We rise together.
-            We build together. We grow together. Ready to take the red bean?
+            {t("A brand for the metaverse")}. {t("Built by the community")}.{" "}
+            {t("We rise together")}. {t("We build together")}.{" "}
+            {t("We grow together")}. {t("Ready to take the red bean?")}
           </div>
         </div>
 

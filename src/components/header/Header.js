@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-import LoginButton from "../../pages/login/LoginButton";
+import LoginButton from "../common/LoginButton";
+import LanguageButton from "../common/LanguageButton";
 
 import Logo from "../../images/nftHouse-brand.png";
 
@@ -35,6 +37,8 @@ const style = {
 function Header() {
   const [open, setOpen] = useState(false);
 
+  const { t } = useTranslation(["es"]);
+
   return (
     <nav className={style.navWrapper}>
       <Link to="/">
@@ -50,7 +54,7 @@ function Header() {
         </div>
       </Link>
 
-      <div onClick={() => setOpen(!open)} className={style.menuBtn}>
+      <div className={style.menuBtn} onClick={() => setOpen(!open)}>
         {!open ? <AiOutlineMenu /> : <CgClose />}
       </div>
 
@@ -66,37 +70,33 @@ function Header() {
             </div>
             <input
               className={style.searchInput}
-              placeholder="Search items, collections and accounts"
+              placeholder={t("Search items, collections and accounts")}
             />
           </div>
 
           <NavLink to="/assets">
-            <div className={style.headerItem}>Explore</div>
+            <div className={style.headerItem}>{t("Explore")}</div>
           </NavLink>
 
-          <NavLink to="/404">
-            <div className={style.headerItem}>Stats</div>
-          </NavLink>
-
-          <NavLink to="/404">
-            <div className={style.headerItem}>Resources</div>
-          </NavLink>
-
-          <NavLink to="/asset/create">
-            <div className={style.headerItem}>Create</div>
-          </NavLink>
-
-          <div className={style.headerIconContainer}>
-            <NavLink to="/account" end>
-              <div className={style.headerIcon}>
-                <CgProfile title="Account" />
-              </div>
+          <>
+            <NavLink to="/asset/create">
+              <button className={style.headerItem}>{t("Create")}</button>
             </NavLink>
 
-            <NavLink to="/login">            
-                <LoginButton />                         
-            </NavLink>
-          </div>
+            <div className={style.headerIconContainer}>
+              <NavLink to="/account">
+                <button className={style.headerIcon}>
+                  <CgProfile title={t("Account")} />
+                </button>
+              </NavLink>
+
+              <NavLink to="/login">
+                <LoginButton />
+              </NavLink>
+
+              <LanguageButton />
+            </div>
+          </>
         </div>
       </div>
     </nav>

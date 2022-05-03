@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import NftImg from "../../images/1.png";
 import EthLogo from "../../images/eth.svg";
@@ -28,6 +29,8 @@ const style = {
 };
 
 const NftCard = () => {
+  const { t } = useTranslation(["es"]);
+
   const navigate = useNavigate();
 
   return (
@@ -44,7 +47,7 @@ const NftCard = () => {
           </div>
 
           <div className={style.infoRight}>
-            <div className={style.priceTag}>Price</div>
+            <div className={style.priceTag}>{t("Price")}</div>
             <div className={style.priceValue}>
               <img className={style.cardEthLogo} src={EthLogo} alt="" />
               12

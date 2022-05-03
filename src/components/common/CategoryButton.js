@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 const style = {
   optionsContainer:
     "grow block order-1 w-full text-white font-normal text-[18px]",
@@ -8,12 +10,14 @@ const style = {
 };
 
 const CategoryButton = () => {
+  const { t } = useTranslation(["es"]);
+
   return (
     <div className={style.optionsContainer}>
       <select className={style.selectOptionsContainer}>
-        <option className={style.selectOptions}>
-          Select category
-        </option>
+        <option className={style.selectOptions}>{t("Select category")}</option>
+        <option className={style.selectOptions}>{t("Art")}</option>
+        <option className={style.selectOptions}>{t("Collectibles")}</option>
       </select>
     </div>
   );

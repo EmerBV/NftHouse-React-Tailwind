@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import Header from "../../components/header/Header";
 import NftCard from "../../components/nft/NFTCard";
 
@@ -27,6 +29,8 @@ const style = {
 };
 
 const ExplorePage = () => {
+  const { t } = useTranslation(["es"]);
+
   return (
     <>
       <Header />
@@ -34,7 +38,7 @@ const ExplorePage = () => {
       <div className={style.collectionWrapper}>
         <div className={style.collectionContainer}>
           <div className={style.itemsTextContainer}>
-            <p className={style.itemsText}>Items</p>
+            <p className={style.itemsText}>{t("items")}</p>
           </div>
 
           <div className={style.filterWrapper}>

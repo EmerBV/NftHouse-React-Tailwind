@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
 import EthLogo from "../../images/eth.svg";
@@ -16,13 +17,15 @@ const style = {
 };
 
 const EventItem = () => {
+  const { t } = useTranslation(["es"]);
+
   return (
     <div className={style.eventItem}>
       <div className={`${style.event} flex-[2]`}>
         <div className={style.eventIcon}>
           <BsFillCartFill />
         </div>
-        <div className={style.eventName}>Sale</div>
+        <div className={style.eventName}>{t("Sale")}</div>
       </div>
       <div className={`${style.eventPrice} flex-[2]`}>
         <img src={EthLogo} alt="eth" className={style.ethLogo} />
