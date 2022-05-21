@@ -5,6 +5,7 @@ import NftCard from "../../components/nft/NFTCard";
 
 import CategoryButton from "../../components/common/CategoryButton";
 import SortPriceButton from "../../components/common/SortPriceButton";
+import Loader from "../../components/common/Loader";
 
 const style = {
   collectionWrapper: "overflow-hidden py-0 px-[28px] block",
@@ -48,6 +49,7 @@ const ExplorePage = () => {
         </div>
 
         <>
+          <Loader />
           <div className={style.nftCardWrapper}>
             <NftCard />
           </div>

@@ -2,6 +2,9 @@ import { useTranslation } from "react-i18next";
 
 import Header from "../../components//header/Header";
 import NFTCard from "../../components/nft/NFTCard";
+
+import Loader from "../../components/common/Loader";
+
 import BannerImg from "../../images/banner.jpg";
 import ProfileImg from "../../images/azuki_logo_2.jpg";
 import EthLogo from "../../images/eth.svg";
@@ -132,7 +135,12 @@ const AccountPage = () => {
           </div>
         </div>
 
-        <div className={style.nftCardWrapper}>{<NFTCard />}</div>
+        <>
+          <Loader />
+          <div className={style.nftCardWrapper}>
+            <NFTCard />
+          </div>
+        </>
       </div>
     </>
   );

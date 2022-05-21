@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 
+import { toast } from "react-toastify";
+
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 

@@ -22,8 +22,7 @@ const style = {
     "relative text-lg font-bold md:py-4 py-3 bg-[#2081E2] rounded-[10px] text-white hover:bg-[#15B2E5] cursor-pointer border-[1px] border-[#151B22] text-center md:w-[200px] w-[110px]",
   button:
     "relative text-lg font-bold md:py-4 py-3 bg-[#353840] rounded-[10px] text-[#e4e8ea] hover:bg-[#4c505c] cursor-pointer border-[1px] border-[#151B22] text-center md:w-[200px] w-[110px]",
-  cardContainer:
-    "justify-center items-center hover:shadow-lg transform transition hover:-translate-y-2",
+  cardContainer: "relative justify-center items-center cursor-pointer",
   cardImg: "rounded-t-2xl h-full",
   infoContainer:
     "h-20 bg-[#313338] p-4 rounded-b-2xl flex items-center text-white",
