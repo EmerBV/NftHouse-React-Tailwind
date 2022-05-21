@@ -17,7 +17,7 @@ const style = {
   detailsPurchaseContainer:
     "mx-[20px] mt-[20px] mb-[15px] flex flex-wrap flex-col justify-between",
   detailsContainer: "block items-center justify-between mb-[5px] max-w-full",
-  purchaseWrapper: "m-[20px] block",
+  purchaseWrapper: "flex w-full items-center justify-center",
   purchaseContainer: "block",
   bottomWrapper: "w-full mt-0 mb-[20px] block",
   bottomContainer: "overflow-auto w-full block",

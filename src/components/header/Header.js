@@ -17,7 +17,7 @@ const style = {
   logo: "flex items-center ml-[8px]",
   logoImg: "block items-center",
   searchBar:
-    "flex w-full items-center bg-[#363840] rounded-[0.8rem] hover:bg-[#4c505c] md:my-0 my-7 font-extrabold text-[20px]",
+    "flex w-full items-center bg-[#363840] rounded-[0.8rem] hover:bg-[#4c505c] md:my-0 my-7 font-extrabold md:text-[20px] text-[16px]",
   searchIcon: "text-[#8a939b] text-3xl mx-6 items-center",
   searchInput:
     "md:flex md:items-center h-[60px] w-full border-0 bg-transparent outline-0 ring-0 text-[#e6e8eb] placeholder:text-[#8a939b]",
