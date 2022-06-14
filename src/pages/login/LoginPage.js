@@ -16,7 +16,7 @@ const style = {
     "p-[50px] rounded-lg border-[#151c22] border justify-center items-center",
   inputContainer: "mb-4",
   placeholderContainer:
-    "lex relative rounded-[10px] bg-[#363840] items-center pl-[12px] h-[48px] border border-[#151b22] w-full text-white outline-none text-[20px]",
+    "flex relative rounded-[10px] bg-[#363840] items-center pl-[12px] h-[48px] border border-[#151b22] w-full text-white outline-none text-[20px]",
   loginBtnContainer: "flex justify-center items-center p-[0.3rem] my-2",
   loginBtn:
     "justify-center items-center border border-[#282b2f] bg-[#2081e2] hover:bg-[#42a0ff] text-[25px] font-semibold rounded-lg text-white w-[250px] h-[60px]",
